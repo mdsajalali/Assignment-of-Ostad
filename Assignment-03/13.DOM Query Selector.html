@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Query Selector Example</title>
+  <style>
+    .class1 {
+      color: blue;
+    }
+
+    .class2 {
+      color: green;
+    }
+
+    .class3 {
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  <h1>DOM Query Selector Example</h1>
+  <p class="class1" id="paragraph1">Paragraph 1</p>
+  <p class="class2" id="paragraph2">Paragraph 2</p>
+  <p class="class1" id="paragraph3">Paragraph 3</p>
+  <p class="class3" id="paragraph4">Paragraph 4</p>
+
+  <script>
+    const paragraphs = document.querySelectorAll('.class1');
+
+    for (let i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].style.color = 'red';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add CSS Class Example</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Add CSS Class Example</h1>
+    <button id="myButton">Click Me</button>
+    <p id="myParagraph">Paragraph Text</p>
+
+    <script>
+      const button = document.getElementById("myButton");
+      const paragraph = document.getElementById("myParagraph");
+
+      button.addEventListener("click", function () {
+        paragraph.classList.add("highlight");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11. Create Element & Append Element</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        padding: 20px 40px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul></ul>
+
+    <script>
+      const appendListItems = () => {
+        const list = document.querySelector("ul");
+
+        for (let i = 1; i <= 5; i++) {
+          const item = document.createElement("li");
+          item.innerText = i;
+          list.append(item);
+        }
+      };
+
+      appendListItems();
+    </script>
+  </body>
+</html>

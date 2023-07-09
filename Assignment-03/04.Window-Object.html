@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function openNewWindow(url, width, height) {
+        const left = (window.innerWidth - width) / 2;
+        const top = (window.innerHeight - height) / 2;
+
+        window.open(
+          url,
+          `width=${width}, height=${height}, left=${left}, top=${top}`
+        );
+      }
+
+      openNewWindow("https://www.example.com", 800, 600);
+    </script>
+  </body>
+</html>

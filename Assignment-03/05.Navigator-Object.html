@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getBrowserInfo() {
+        const browserName = navigator.userAgent;
+
+        let browserVersion = "";
+        const match = navigator.userAgent.match(
+          /(chrome|firefox|opera|msie|trident(?=\/))\/?\s*([\d\.]+)/i
+        );
+        if (match && match[2]) {
+          browserVersion = match[2];
+        }
+
+        console.log("Browser Name:", browserName);
+        console.log("Browser Version:", browserVersion);
+      }
+
+      getBrowserInfo();
+    </script>
+  </body>
+</html>

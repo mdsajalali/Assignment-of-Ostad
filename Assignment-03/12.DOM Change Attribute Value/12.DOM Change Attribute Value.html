@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Image Source Example</title>
+  </head>
+  <body>
+    <h1>Change Image Source Example</h1>
+    <img id="myImage" src="./images/image.jpg" alt="Initial Image" />
+    <br /><br />
+    <button id="changeImageBtn">Change Image</button>
+
+    <script>
+      const changeImageButton = document.getElementById("changeImageBtn");
+      const image = document.getElementById("myImage");
+
+      changeImageButton.addEventListener("click", function () {
+        image.src = "./images/image2.jpg";
+      });
+    </script>
+  </body>
+</html>

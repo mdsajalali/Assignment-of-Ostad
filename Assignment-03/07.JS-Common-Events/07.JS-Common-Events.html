@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Handling Example</title>
+    <style>
+      img {
+        width: 200px;
+        height: 200px;
+        transition: transform 0.3s;
+      }
+
+      img:hover {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Event Handling Example</h1>
+    <p>Click anywhere on the page to display the coordinates.</p>
+    <p>Press any key on the keyboard to display the key code.</p>
+    <img id="myImage" src="./images/image1.jpg" alt="Image" />
+
+    <script>
+      document.addEventListener("click", function (event) {
+        const x = event.clientX;
+        const y = event.clientY;
+        alert("Clicked at coordinates (x, y): " + x + ", " + y);
+      });
+
+      document.addEventListener("keydown", function (event) {
+        const keyCode = event.keyCode || event.which;
+        alert("Key pressed. Key code: " + keyCode);
+      });
+
+      const image = document.getElementById("myImage");
+      image.addEventListener("mouseover", function () {
+        image.src = "./images/image2.jpg";
+      });
+
+      image.addEventListener("mouseout", function () {
+        image.src = "./images/image3.jpg";
+      });
+    </script>
+  </body>
+</html>
